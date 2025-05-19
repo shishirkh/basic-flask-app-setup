@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: shishirkhandelwal/algo-test:0.1
+        image: registry.digitalocean.com/shishir123-registry/test:0.1
         ports:
-        - containerPort: 5000
+        - containerPort: 4000
         env:
         - name: FLASK_ENV
           value: "dev"

@@ -23,5 +23,5 @@ variable "node_size" {
 }
 
 variable "registry_name" {
-  default = "my-registry"
+  default = "shishir123-registry"
 }
