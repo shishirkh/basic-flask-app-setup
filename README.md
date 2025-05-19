@@ -37,6 +37,29 @@ terraform apply
 
 ### 4. Deploy to Kubernetes
 
+- login into registry:
+
+```bash
+doctl registry login
+```
+
+- build image and push to new registry
+
+```bash
+docker build -t registry.digitalocean.com/shishir123-registry/test:0.1 --platform linux/amd64 .
+docker push registry.digitalocean.com/shishir123-registry/test:0.1
+```
+
+- Make changes to image name in deployment.yaml 
+- Updating kubernetes config
+- Set context to newly created kubernetes cluster
+
+```bash
+doctl kubernetes cluster kubeconfig save b8919404-268c-4668-8389-9c6e008e4888
+```
+
+- Apply manifest files
+
 ```bash
 cd kubernetes_manifests
 kubectl apply -f deployment.yaml
