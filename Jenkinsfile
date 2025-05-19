@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE = "shishirkhandelwal/algo-test:${BUILD_NUMBER}"
+    DOCKER_IMAGE = "registry.digitalocean.com/shishir123-registry/test:${BUILD_NUMBER}"
     DO_TOKEN = credentials('do_token') 
     KUBECONFIG_CRED = credentials('kubeconfig') 
   }
